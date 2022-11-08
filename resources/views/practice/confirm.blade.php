@@ -21,11 +21,15 @@
                 <th>お問合せ内容</th>
                 <th>ご希望の連絡先</th>
             </tr>
-        <?php 
-            foreach ($results as $result) {
-                echo "<tr><td>{{$result['id']}}</td><td>{{$result['name']}}</td><td>{{$result['hurigana']}}</td></tr>";
-            }
-        ?>
-        </form>
+        
+            @foreach ($results as $result)
+                <tr>
+                    <td>{{$result->id}}</td>
+                    <td>{{$result->name}}</td>
+                    <td>{{$result->hurigana}}</td>
+                </tr>
+            @endforeach
+        </table>
+        <!-- </form> -->
     </body>
 </html>

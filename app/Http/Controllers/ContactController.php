@@ -10,9 +10,10 @@ class ContactController extends Controller
         return view('practice.contact');
     }
     public function confirm() {
-        
-        $sql = 'SELECT * FROM contents';
-        $results = $contents->toarray();
+
+        // $sql = 'SELECT * FROM contents';
+        // $results = $contents->toarray();
+        $results = App\Content::all();
 
         return view('practice.confirm', compact('results'));
     }
