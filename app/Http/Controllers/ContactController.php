@@ -13,9 +13,9 @@ class ContactController extends Controller
 
         // $sql = 'SELECT * FROM contents';
         // $results = $contents->toarray();
-        $results = App\Content::all();
+        // $results = App\Content::all();
 
-        return view('practice.confirm', compact('results'));
+        return view('practice.confirm');
     }
     public function store(Request $request) {
         $contents = new Content();
@@ -26,8 +26,9 @@ class ContactController extends Controller
         $contents->message = $request->input('message');
         $contents->contact = $request->input('contact');
         $contents->save();
-
-        
-        return view('practice.confirm');
+        $show_contents = Content::find($contents->id);
+        $results = $show_contents->toarray();
+        return view('practice.confirm', compact('results'));
+        // return view('practice.confirm', compact('show_contents'));
     }
 }
