@@ -5,10 +5,19 @@
         <meta charset="utf-8">
         <meta name="description" content="内容確認">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
         <title>お問合せ履歴</title>
     </head>
 
     <body>
+        <header>
+            <h1>お問い合わせ</h1>
+
+            <nav>
+                <a href="contact">お問合せページ</a>
+            </nav>
+
+        </header>
         <h2>お問合せ履歴</h2>
         {{-- <form action = "/practice/confirm" method = "post"> --}}
         <table>
