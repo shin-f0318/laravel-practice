@@ -11,8 +11,7 @@ class ContactController extends Controller
     }
     public function confirm() {
 
-        // $sql = 'SELECT * FROM contents';
-        // $results = $contents->toarray();
+        
         // $results = App\Content::all();
 
         return view('practice.confirm');
@@ -26,9 +25,15 @@ class ContactController extends Controller
         $contents->message = $request->input('message');
         $contents->contact = $request->input('contact');
         $contents->save();
-        $show_contents = Content::find($contents->id);
-        $results = $show_contents->toarray();
-        return view('practice.confirm', compact('results'));
+
+        // $show_contents = Content::find($contents->id);
         // return view('practice.confirm', compact('show_contents'));
+
+        // $sql = 'SELECT * FROM contents';
+        // $results = $sql->toarray();
+        // return view('practice.confirm', compact('results'));
+        
+        $contents = \DB::table('contents')->get();
+        return view('practice.confirm', compact('contents'));
     }
 }
