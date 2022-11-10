@@ -15,6 +15,7 @@
 
             <nav>
                 <a href="contact">お問合せページ</a>
+                <a href="edit">編集ページ</a>
             </nav>
 
         </header>
@@ -58,9 +59,12 @@
                     <td>{{$content->tel}}</td>
                     <td>{{$content->message}}</td>
                     <td>{{$content->contact}}</td>
-                </tr>
+                </tr>  
             @endforeach
         </table>
+        <div>
+            {{-- <a href="{{ route('practice.edit', $contents) }}">編集</a> --}}
+        </div>
         {{-- </form> --}}
     </body>
 </html>

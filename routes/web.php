@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::get('/practice/contact', [ContactController::class, 'contact'])->name('practice.contact');
 Route::post('/practice/confirm', [ContactController::class, 'confirm'])->name('practice.confirm');
 Route::post('/practice/contact', [ContactController::class, 'store'])->name('practice.store');
+Route::get('/practice/edit', [ContactController::class, 'edit'])->name('practice.edit');
+Route::patch('/practice/update', [ContactController::class, 'update'])->name('practice.update');

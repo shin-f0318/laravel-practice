@@ -36,4 +36,20 @@ class ContactController extends Controller
         $contents = \DB::table('contents')->get();
         return view('practice.confirm', compact('contents'));
     }
+    // 更新ページ
+    public function edit(Content $contents) {
+        return view('practice.edit', compact('contents'));
+    }
+    public function update(Request $request, Content $contents) {
+        $contents = new Content();
+        $contents->name = $request->input('name');
+        $contents->hurigana = $request->input('hurigana');
+        $contents->email = $request->input('email');
+        $contents->tel = $request->input('tel');
+        $contents->message = $request->input('message');
+        $contents->contact = $request->input('contact');
+        $contents->save(); 
+
+        return view('practice.confirm');
+    }
 }
