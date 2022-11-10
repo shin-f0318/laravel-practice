@@ -33,15 +33,17 @@ class ContactController extends Controller
         // $results = $sql->toarray();
         // return view('practice.confirm', compact('results'));
         
-        $contents = \DB::table('contents')->get();
+        // $contents = \DB::table('contents')->get();
+        $contents = Content::get();
         return view('practice.confirm', compact('contents'));
     }
     // 更新ページ
     public function edit(Content $contents) {
+        $contents = Content::get();
         return view('practice.edit', compact('contents'));
     }
     public function update(Request $request, Content $contents) {
-        $contents = new Content();
+        
         $contents->name = $request->input('name');
         $contents->hurigana = $request->input('hurigana');
         $contents->email = $request->input('email');

@@ -23,7 +23,7 @@
                     <h1>お問合せ内容編集</h1>
 
                     <div>
-                        <a href="confirm">&lt; 戻る</a>
+                        <a href="confirm">戻る</a>
                     </div>
 
                     <form action="{{ route('practice.update') }}",$content method="post">
@@ -43,7 +43,7 @@
                         </div>
                         <div>
                             <label for="tel">電話番号</label>
-                            <input type="text" name="tel" value="{{ $contents->tel }}">
+                            <input type="text" name="tel" value={{ $contents->tel }}>
                         </div>
                         <div>
                             <label for="message">お問合せ内容</label>

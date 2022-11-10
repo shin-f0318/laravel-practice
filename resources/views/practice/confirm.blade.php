@@ -15,7 +15,7 @@
 
             <nav>
                 <a href="contact">お問合せページ</a>
-                <a href="edit">編集ページ</a>
+                {{-- <a href="edit">編集ページ</a> --}}
             </nav>
 
         </header>
@@ -59,6 +59,7 @@
                     <td>{{$content->tel}}</td>
                     <td>{{$content->message}}</td>
                     <td>{{$content->contact}}</td>
+                    <td><a href="{{ route('practice.edit') }}" class="btn btn-primary btn-sm">編集</a></td>
                 </tr>  
             @endforeach
         </table>
