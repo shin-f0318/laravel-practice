@@ -13,15 +13,13 @@
 
             <nav>
                 <div>
-                    <a href="#">introduction</a>
-                    <a href="#">portfolio</a>
-                    <a href="/practice/contact">contact</a>
+                    <a href="index">一覧画面</a>
                 </div>
             </nav>
         </header>
         
         <section>
-        <form action="/practice/contact" method="post">
+        <form action="{{ route('practice.store') }}" method="post">
         @csrf
             <div>
                 <div>
@@ -82,7 +80,6 @@
                   <input type="radio" value="電話" name="contact" checked><label>お電話</label>
                   <input type="radio" value="メール" name="contact"><label>メール</label>
                   <input type="radio" value="どちらでも" name="contact"><label>どちらでも</label>
-                  <p id="errorMessage5"></p>
                 </div>
             </div>
             

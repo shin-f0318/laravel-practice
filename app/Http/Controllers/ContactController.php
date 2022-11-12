@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Content;
-class ContactController extends Controller
-{
+class ContactController extends Controller {
+    public function index() {
+        $contents = Content::get();
+        return view('practice.index', compact('contents'));
+    }
     public function contact() {
         return view('practice.contact');
     }
     public function confirm() {
-
-        
-        // $results = App\Content::all();
 
         return view('practice.confirm');
     }
@@ -25,17 +25,8 @@ class ContactController extends Controller
         $contents->message = $request->input('message');
         $contents->contact = $request->input('contact');
         $contents->save();
-
-        // $show_contents = Content::find($contents->id);
-        // return view('practice.confirm', compact('show_contents'));
-
-        // $sql = 'SELECT * FROM contents';
-        // $results = $sql->toarray();
-        // return view('practice.confirm', compact('results'));
-        
-        // $contents = \DB::table('contents')->get();
-        $contents = Content::get();
-        return view('practice.confirm', compact('contents'));
+        $show_content = Content::find($contents->id);
+        return view('practice.confirm', compact('show_content'));
     }
     // 更新ページ
     public function edit(Content $contents) {

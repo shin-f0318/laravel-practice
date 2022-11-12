@@ -11,61 +11,21 @@
 
     <body>
         <header>
-            <h1>お問い合わせ</h1>
-
+            <h1>登録完了</h1>
             <nav>
-                <a href="contact">お問合せページ</a>
-                {{-- <a href="edit">編集ページ</a> --}}
+                <a href="{{ route('practice.index') }}">一覧画面</a>
+                <a href="{{ route('practice.contact') }}">お問合せページ</a>
             </nav>
-
         </header>
-        <h2>お問合せ履歴</h2>
-        {{-- <form action = "/practice/confirm" method = "post"> --}}
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>氏名</th>
-                <th>フリガナ</th>
-                <th>メールアドレス</th>
-                <th>電話番号</th>
-                <th>お問合せ内容</th>
-                <th>ご希望の連絡先</th>
-            </tr>
 
-            {{-- @foreach ($show_contents as $show_content) --}}
-            {{-- @foreach ($results as $result) --}}
-            @foreach ($contents as $content)
-                <tr>
-                    {{-- <td>{{$show_contents->id}}</td>
-                    <td>{{$show_contents->name}}</td>
-                    <td>{{$show_contents->hurigana}}</td>
-                    <td>{{$show_contents->email}}</td>
-                    <td>{{$show_contents->tel}}</td>
-                    <td>{{$show_contents->message}}</td>
-                    <td>{{$show_contents->contact}}</td> --}}
-
-                    {{-- <td>{{$result->id}}</td>
-                    <td>{{$result->name}}</td>
-                    <td>{{$result->hurigana}}</td>
-                    <td>{{$result->email}}</td>
-                    <td>{{$result->tel}}</td>
-                    <td>{{$result->message}}</td>
-                    <td>{{$result->contact}}</td> --}}
-
-                    <td>{{$content->id}}</td>
-                    <td>{{$content->name}}</td>
-                    <td>{{$content->hurigana}}</td>
-                    <td>{{$content->email}}</td>
-                    <td>{{$content->tel}}</td>
-                    <td>{{$content->message}}</td>
-                    <td>{{$content->contact}}</td>
-                    <td><a href="{{ route('practice.edit') }}" class="btn btn-primary btn-sm">編集</a></td>
-                </tr>  
-            @endforeach
-        </table>
-        <div>
-            {{-- <a href="{{ route('practice.edit', $contents) }}">編集</a> --}}
-        </div>
-        {{-- </form> --}}
+        <h2>下記内容で登録が完了いたしました。</h2>
+        <form action="{{ route('practice.confirm') }}" method="post">
+            <p>お名前:{{$show_content->name}}</p>
+            <p>フリガナ:{{$show_content->hurigana}}</p>
+            <p>メールアドレス:{{$show_content->email}}</p>
+            <p>電話番号:{{$show_content->tel}}</p>
+            <p>お問い合わせ内容：{{$show_content->message}}</p>
+            <p>ご希望の連絡先：{{$show_content->contact}}</p>
+        </form>
     </body>
 </html>

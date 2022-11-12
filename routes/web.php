@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/practice/index', [ContactController::class, 'index'])->name('practice.index');
 Route::get('/practice/contact', [ContactController::class, 'contact'])->name('practice.contact');
 Route::post('/practice/confirm', [ContactController::class, 'confirm'])->name('practice.confirm');
 Route::post('/practice/contact', [ContactController::class, 'store'])->name('practice.store');
