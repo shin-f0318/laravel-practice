@@ -38,7 +38,7 @@
                     <td>{{$content->tel}}</td>
                     <td>{{$content->message}}</td>
                     <td>{{$content->contact}}</td>
-                    <td><a href="{{ route('practice.edit') }}" class="btn btn-primary btn-sm">編集</a></td>
+                    <td><a href="{{ route('practice.edit', $content) }}" class="btn btn-primary btn-sm">編集</a></td>
                 </tr>  
             @endforeach
         </table>

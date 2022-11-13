@@ -31,29 +31,29 @@
                         @method('patch')
                         <div>
                             <label for="name">名前</label>
-                            <input type="text" name="name" value="{{ $contents->name }}">
+                            <input type="text" name="name" value="{{ $content->name }}">
                         </div>
                         <div>
                             <label for="hurigana">フリガナ</label>
-                            <input type="text" name="hurigana" value="{{ $contents->hurigana }}">
+                            <input type="text" name="hurigana" value="{{ $content->hurigana }}">
                         </div>
                         <div>
                             <label for="email">メールアドレス</label>
-                            <input type="text" name="email" value="{{ $contents->email }}">
+                            <input type="text" name="email" value="{{ $content->email }}">
                         </div>
                         <div>
                             <label for="tel">電話番号</label>
-                            <input type="text" name="tel" value={{ $contents->tel }}>
+                            <input type="text" name="tel" value="{{ $content->tel }}">
                         </div>
                         <div>
                             <label for="message">お問合せ内容</label>
-                            <textarea name="message">{{ $contents->message }}</textarea>
+                            <textarea name="message">{{ $content->message }}</textarea>
                         </div>
                         <div>
                             <label for="contact">ご希望の連絡先</label>
-                            <input type="radio" value="{{ $contents->contact }}" name="contact"><label>お電話</label>
-                            <input type="radio" value="{{ $contents->contact }}" name="contact"><label>メール</label>
-                            <input type="radio" value="{{ $contents->contact }}" name="contact"><label>どちらでも</label>
+                            <input type="radio" value="{{ $content->contact }}" name="contact"><label>お電話</label>
+                            <input type="radio" value="{{ $content->contact }}" name="contact"><label>メール</label>
+                            <input type="radio" value="{{ $content->contact }}" name="contact"><label>どちらでも</label>
                         </div>
                         <button type="submit">更新</button>
                     </form>

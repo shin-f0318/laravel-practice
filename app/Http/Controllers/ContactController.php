@@ -34,14 +34,14 @@ class ContactController extends Controller {
     }
     public function update(Request $request, Content $content) {
         
-        $contents->name = $request->input('name');
-        $contents->hurigana = $request->input('hurigana');
-        $contents->email = $request->input('email');
-        $contents->tel = $request->input('tel');
-        $contents->message = $request->input('message');
-        $contents->contact = $request->input('contact');
-        $contents->save();
+        $content->name = $request->input('name');
+        $content->hurigana = $request->input('hurigana');
+        $content->email = $request->input('email');
+        $content->tel = $request->input('tel');
+        $content->message = $request->input('message');
+        $content->contact = $request->input('contact');
+        $content->save();
         
-        return redirect('practice.index', $content, compact('contents'));
+        return redirect('practice.edit', $content, compact('content'));
     }
 }
