@@ -29,11 +29,10 @@ class ContactController extends Controller {
         return view('practice.confirm', compact('show_content'));
     }
     // 更新ページ
-    public function edit(Content $contents) {
-        $contents = Content::get();
-        return view('practice.edit', compact('contents'));
+    public function edit(Content $content) {
+        return view('practice.edit', compact('content'));
     }
-    public function update(Request $request, Content $contents) {
+    public function update(Request $request, Content $content) {
         
         $contents->name = $request->input('name');
         $contents->hurigana = $request->input('hurigana');
@@ -41,8 +40,8 @@ class ContactController extends Controller {
         $contents->tel = $request->input('tel');
         $contents->message = $request->input('message');
         $contents->contact = $request->input('contact');
-        $contents->save(); 
-
-        return view('practice.confirm');
+        $contents->save();
+        
+        return redirect('practice.index', $content, compact('contents'));
     }
 }

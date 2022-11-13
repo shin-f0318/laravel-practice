@@ -11,8 +11,8 @@
         <header>
             <nav>
                 <div>                
-                    <a href="contact">お問合せページ</a>
-                    <a href="confirm">お問合せ内容確認ページ</a>
+                    <a href="{{ route('practice.confirm') }}">お問合せページ</a>
+                    <a href="{{ route('practice.index') }}">一覧ページ</a>
                 </div>
             </nav>
         </header>
@@ -23,10 +23,10 @@
                     <h1>お問合せ内容編集</h1>
 
                     <div>
-                        <a href="confirm">戻る</a>
+                        <a href="{{ route('practice.index') }}">戻る</a>
                     </div>
 
-                    <form action="{{ route('practice.update') }}",$content method="post">
+                    <form action="{{ route('practice.update', $content) }}" method="post">
                         @csrf
                         @method('patch')
                         <div>
