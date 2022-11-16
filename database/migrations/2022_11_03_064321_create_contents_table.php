@@ -21,7 +21,9 @@ return new class extends Migration
             $table->string('tel');
             $table->text('message');
             $table->string('contact');
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
