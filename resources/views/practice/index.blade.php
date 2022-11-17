@@ -1,4 +1,4 @@
-{{-- @extends('layouts.app') --}}
+@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -10,6 +10,7 @@
         <title>一覧画面</title>
     </head>
 
+    
     <body style="padding: 60px 0;">
         <header>
             <h1>一覧画面</h1>
@@ -22,7 +23,7 @@
                 </div>
             </nav>
         </header> 
-{{-- @section('content') --}}
+        @section('content')
         <main>
             <article>
                 <div class="container">
@@ -73,4 +74,4 @@
         </footer>
     </body>
 </html>
-{{-- @endsection --}}
+@endsection

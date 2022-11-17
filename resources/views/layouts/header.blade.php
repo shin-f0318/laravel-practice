@@ -1,9 +1,12 @@
 <header>
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">    
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand" href="{{ route('practice.contact') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
+        <nav>
+        <a class="navbar-brand" href="{{ route('practice.index') }}">一覧画面</a>
+        </nav>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>

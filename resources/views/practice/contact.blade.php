@@ -1,3 +1,5 @@
+@extends('layouts.app')
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,7 +22,9 @@
                 </div>
             </nav>
         </header>
-        
+       
+        @section('content')
+
         <section>
         <form action="{{ route('practice.store') }}" method="post">
         @csrf
@@ -103,3 +107,4 @@
 
    
 </html>
+@endsection

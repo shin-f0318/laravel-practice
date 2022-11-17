@@ -1,3 +1,4 @@
+@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -7,18 +8,10 @@
         @vite(['resources/js/app.js'])
         <title>お問合せ内容編集</title>    
     </head>
-    
-    <body>
-        <header>
-            <nav>
-                <div>  
-                    <a href="">ログイン</a>              
-                    <a href="{{ route('practice.confirm') }}">お問合せページ</a>
-                    <a href="{{ route('practice.index') }}">一覧ページ</a>
-                </div>
-            </nav>
-        </header>
 
+@section('content')
+
+    <body>
         <main>
             <article>
                 <div>
@@ -62,3 +55,6 @@
                 </div>
             </article>
         </main>
+    </body>
+</html>
+@endsection

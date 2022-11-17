@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Content;
 use Illuminate\Support\Facades\Auth;
 
+
 class ContactController extends Controller {
     
-    public function __construct(){
-        $this->middleware('auth');
-    }
+    // public function __construct(){
+    //     $this->middleware('auth')->except('practice.contact');
+        
+    // }
 
     public function index() {
         $contents = Auth::user()->contents;
@@ -67,7 +69,4 @@ class ContactController extends Controller {
         return redirect('/practice/index');
     }
 
-    public function login() {
-        return redirect('/');
-    }
 }

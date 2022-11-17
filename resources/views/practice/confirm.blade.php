@@ -1,3 +1,4 @@
+@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="ja">
     
@@ -18,7 +19,7 @@
                 <a href="{{ route('practice.contact') }}">お問合せページ</a>
             </nav>
         </header>
-
+@section('content')
         <h2>下記内容で登録が完了いたしました。</h2>
         <form action="{{ route('practice.confirm') }}" method="post">
             <p>お名前:{{$show_content->name}}</p>
@@ -30,3 +31,4 @@
         </form>
     </body>
 </html>
+@endsection
