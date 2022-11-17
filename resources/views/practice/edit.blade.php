@@ -12,7 +12,7 @@
         <header>
             <nav>
                 <div>  
-                    <a href="{{ route('home') }}">ログイン</a>              
+                    <a href="">ログイン</a>              
                     <a href="{{ route('practice.confirm') }}">お問合せページ</a>
                     <a href="{{ route('practice.index') }}">一覧ページ</a>
                 </div>

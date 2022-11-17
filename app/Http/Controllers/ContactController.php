@@ -16,8 +16,8 @@ class ContactController extends Controller {
         $contents = Auth::user()->contents;
  
          return view('practice.index', compact('contents'));
-        // $contents = Content::get();
-        // return view('practice.index', compact('contents'));
+        $contents = Content::get();
+        return view('practice.index', compact('contents'));
     }
 
     public function contact() {
@@ -65,5 +65,9 @@ class ContactController extends Controller {
         // dd($content);
         $content->delete();
         return redirect('/practice/index');
+    }
+
+    public function login() {
+        return redirect('/');
     }
 }

@@ -14,10 +14,6 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/practice/index', [ContactController::class, 'index'])->middleware('auth')->name('practice.index');
 Route::get('/practice/contact', [ContactController::class, 'contact'])->middleware('auth')->name('practice.contact');
 Route::post('/practice/confirm', [ContactController::class, 'confirm'])->middleware('auth')->name('practice.confirm');

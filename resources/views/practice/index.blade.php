@@ -1,6 +1,6 @@
+{{-- @extends('layouts.app') --}}
 <!DOCTYPE html>
 <html lang="ja">
-    
     <head>
         <meta charset="utf-8">
         <meta name="description" content="内容確認">
@@ -16,13 +16,13 @@
 
             <nav class="navbar navbar-light bg-light fixed-top" style="height: 60px;">
                 <div> 
-                    <a href="login" class="navbar-brand">ログイン</a>
+                    
                     <a href="index" class="navbar-brand">一覧画面</a>
                     <a href="contact" class="navbar-brand">お問合せページ</a>
                 </div>
             </nav>
-        </header>
-
+        </header> 
+{{-- @section('content') --}}
         <main>
             <article>
                 <div class="container">
@@ -73,3 +73,4 @@
         </footer>
     </body>
 </html>
+{{-- @endsection --}}
