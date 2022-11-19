@@ -15,9 +15,9 @@ class ContactController extends Controller {
     // }
 
     public function index() {
-        $contents = Auth::user()->contents;
+        // $contents = Auth::user()->contents;
  
-         return view('practice.index', compact('contents'));
+        //  return view('practice.index', compact('contents'));
         $contents = Content::get();
         return view('practice.index', compact('contents'));
     }
@@ -37,7 +37,7 @@ class ContactController extends Controller {
         $contents->tel = $request->input('tel');
         $contents->message = $request->input('message');
         $contents->contact = $request->input('contact');
-        $contents->user_id = Auth::id();
+        // $contents->user_id = Auth::id();
         $contents->save();
         $show_content = Content::find($contents->id);
         return view('practice.confirm', compact('show_content'));
