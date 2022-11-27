@@ -3,8 +3,8 @@
     <title>Add Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <script type="module" src="/js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
+    <script type="module" src="{{ asset('/js/index.js') }}"></script>
   </head>
   <body>
     <h3>My Google Maps Demo</h3>
@@ -18,7 +18,7 @@
      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
     -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuph2L12egRbb7VM7jZODHbDVeNbpn2Oo&callback=initMap&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
       defer
     ></script>
   </body>
