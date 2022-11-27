@@ -22,6 +22,9 @@ Route::get('/practice/edit/{content}', [ContactController::class, 'edit'])->midd
 Route::patch('/practice/update/{content}', [ContactController::class, 'update'])->middleware('auth')->name('practice.update');
 Route::get('/practice/delete/{content}', [ContactController::class, 'destroy'])->middleware('auth')->name('practice.destroy');
 
+// map
+Route::get('/practice/map', [ContactController::class, 'map'])->name('practice.map');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

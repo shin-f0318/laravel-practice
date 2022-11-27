@@ -69,4 +69,8 @@ class ContactController extends Controller {
         return redirect('/practice/index');
     }
 
+    // map
+    public function map() {
+        return view('practice.map');
+    }
 }
