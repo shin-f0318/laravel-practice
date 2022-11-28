@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Add Map</title>
@@ -7,8 +8,8 @@
     <script type="module" src="{{ asset('/js/index.js') }}"></script>
   </head>
   <body>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
+    <h2>湯屋なう　まっぷ</h2>
+    <!-- 地図を表示する領域 -->
     <div id="map"></div>
 
     <!-- 
@@ -18,7 +19,7 @@
      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
     -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN1uJPk6plDR5p1hBU71qlX46RGSXngXc&callback=initMap&v=weekly"
       defer
     ></script>
   </body>

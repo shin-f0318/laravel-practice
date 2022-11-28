@@ -37,7 +37,7 @@ table {
  */
 html,
 body {
-  height: 100%;
-  margin: 0;
+  height: 85%;
+  margin: 5, 5;
   padding: 0;
 }
