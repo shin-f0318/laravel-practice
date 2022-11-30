@@ -2,8 +2,6 @@
 <html>
   <head>
     <title>Add Map</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/map.css') }}">
     <script type="module" src="{{ asset('/js/index.js') }}"></script>
   </head>

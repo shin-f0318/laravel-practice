@@ -16,8 +16,17 @@ google.maps.event.addListener(map, 'click', event => clickListener(event, map));
 
 // ピン
 function clickListener(event, map) {
+  // 緯度取得
   const lat = event.latLng.lat();
+  // htmlへ変数の送信
+  document.getElementById('id_ido').innerHTML = lat ;
+
+  // 経度の取得
   const lng = event.latLng.lng();
+  // htmlへ変数の送信
+  document.getElementById('id_keido').innerHTML = lng ;
+
+  // ピンの設置
   const marker = new google.maps.Marker({
     position: {lat, lng},
     map
@@ -25,11 +34,12 @@ function clickListener(event, map) {
 
 }
 
-// 住所へ変換
-function geocode() {
-  const geocoder = new google.maps.Geocoder();
+// // 住所へ変換
+// function geocode() {
+//   const geocoder = new google.maps.Geocoder();
+
   
-}
+// }
 
 
 
