@@ -27,7 +27,7 @@
       with https://www.npmjs.com/package/@googlemaps/js-api-loader.
       -->
       <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN1uJPk6plDR5p1hBU71qlX46RGSXngXc&callback=initMap&v=weekly"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5cSPmc6sAeGf0bqSACuc-bntOcFx9Eow&callback=initMap&v=weekly"
         async
         defer
       ></script>
