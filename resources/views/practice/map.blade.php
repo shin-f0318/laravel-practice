@@ -9,6 +9,7 @@
     <h2>湯屋なう　まっぷ</h2>
       <div class="head-title">Google Maps APIを使ったサンプル。</div>
       <p>地図座標位置の取得 地図上でクリックで座標・住所の取得</p>
+      <form name="test">
       <table style="width:100%;border:0">
         <tr style="background-color:#dddddd">
         <th style="width:20%">項目</th>
@@ -16,7 +17,9 @@
         <tr><td>緯度</td><td id="id_ido"></td></tr>
         <tr><td>経度</td><td id="id_keido"></td></tr>
         <tr><td>住所</td><td id="id_address"></td></tr>
+        <tr><td>名前</td><td><input type="text" class="form-control" name="lat"></td></tr>
       </table>
+      </form>
       <!-- 地図を表示する領域 -->
       <div id="map"></div>
 
