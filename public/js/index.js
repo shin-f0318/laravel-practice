@@ -33,14 +33,14 @@ function clickListener(event, map) {
     map
   });
 
-  // ピン削除
+  // ピン削除　失敗
   function deleteMakers () {
     if(marker != null) {
       marker.setMap(null);
 		  }
 		  marker = null;
 	}
-  
+
   // 経度・緯度をLatLngクラスへ変換
   const latLngInput = new google.maps.LatLng(lat, lng);
 
@@ -82,16 +82,6 @@ function clickListener(event, map) {
       // htmlへ変数の送信
       document.getElementById('id_address').innerHTML = address;
     });
-
-  //マーカー削除関数
-	deleteMakers();
-}
-
-function deleteMakers() {
-  if(marker != null){
-    marker.setMap(null);
-  }
-  marker = null;
 }
 
 window.initMap = initMap;
