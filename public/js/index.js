@@ -4,7 +4,7 @@ function initMap() {
     // マップの中心を設定
     center: { lat: 35.6811673, lng: 139.7670516 },
     // マップの初期倍率
-    zoom: 9,
+    zoom: 12,
     // マップの種類
     mapTypeId: "roadmap",
   });
@@ -13,7 +13,10 @@ function initMap() {
 google.maps.event.addListener(map, 'click', event => clickListener(event, map));
 
 }
-const marker = null;
+
+// 一つ前のピンの変数
+let before_marker = null;
+
 // ピン
 function clickListener(event, map) {
 
@@ -33,13 +36,20 @@ function clickListener(event, map) {
     map
   });
 
-  // ピン削除　失敗
-  function deleteMakers () {
-    if(marker != null) {
-      marker.setMap(null);
-		  }
-		  marker = null;
-	}
+  // ピン削除
+  if(before_marker != null) {
+    before_marker.setMap(null);
+  }
+  before_marker = marker;
+  marker.setMap(map);
+
+  // // ピン削除
+  // function deleteMakers () {
+  //   if(marker != null) {
+  //     marker.setMap(null);
+	// 	  }
+	// 	  marker = null;
+	// }
 
   // 経度・緯度をLatLngクラスへ変換
   const latLngInput = new google.maps.LatLng(lat, lng);
@@ -81,6 +91,8 @@ function clickListener(event, map) {
   
       // htmlへ変数の送信
       document.getElementById('id_address').innerHTML = address;
+
+      
     });
 }
 
